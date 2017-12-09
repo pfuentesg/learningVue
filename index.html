@@ -4,10 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
+    
     <title>Document</title>
 </head>
 <body>
-    
+    <!--First component, say hello tu Vuejs   -->
+    <div id="app">
+        {{ message }}
+      </div>
+
+      <!--Second component, check reactivity, v-bind binds message propierty with the
+         data.messege propierty -->
+
+    <div id="app-2">
+    <span v-bind:title="message">
+        Hover your mouse over me for a few seconds
+        to see my dynamically bound title!
+    </span>
+    </div>
+    <!--With this third component, we'll learn v-if, a condition bained with a boolean and only
+        visible in dom if it's true  -->
+    <div id="app-3">
+        <span v-if="seen">Now you see me</span>
+    </div>
+
+    <div id="app-4">
+        <ol>
+            <li v-for="todo in todos">
+            {{ todo.text }}
+            </li>
+        </ol>
+    </div>
 </body>
+<script src="index.js"></script> 
 </html>
