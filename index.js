@@ -20,6 +20,8 @@ var app = new Vue({
       seen: true
     }
   })
+  /** app-4 finds out the v-for function */
+
   var app4 = new Vue({
     el: '#app-4',
     data: {
@@ -28,5 +30,24 @@ var app = new Vue({
         { text: 'Learn Vue' },
         { text: 'Build something awesome' }
       ]
+    }
+  })
+  
+  var app5 = new Vue({
+    el: '#app-5',
+    data: {
+      message: 'Reverse me!!'
+    },
+    methods: {
+      reverseMessage: function () {
+        this.message = this.message.split('').reverse().join('')
+      }
+    }
+  })  
+
+  var app6 = new Vue({
+    el: '#app-6',
+    data: {
+      message: 'Hello Vue!'
     }
   })

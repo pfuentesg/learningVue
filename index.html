@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
+    <script src="vue.js"></script>  
     
     <title>Document</title>
 </head>
@@ -28,7 +28,7 @@
     <div id="app-3">
         <span v-if="seen">Now you see me</span>
     </div>
-
+<!--app-4 div will iterate over th todos array  -->
     <div id="app-4">
         <ol>
             <li v-for="todo in todos">
@@ -36,6 +36,17 @@
             </li>
         </ol>
     </div>
+        <!--app-5 show us how methods with buttons works  -->
+    <div id="app-5">
+            <p>{{ message }}</p>
+            <button v-on:click="reverseMessage">Reverse Message</button>
+          </div>
+    <!-- Due to reactive propierties, app-6 allow us to modify message string with an input 
+    and it will render it at the same time-->
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input v-model="message">
+        </div>
 </body>
 <script src="index.js"></script> 
 </html>
