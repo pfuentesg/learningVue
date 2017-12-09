@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link  rel="stylesheet" href="main.css">
     <script src="vue.js"></script>  
     
     <title>Document</title>
 </head>
 <body>
+    <h2><u>Let's learn Vuejs!</u></h2>
     <!--First component, say hello tu Vuejs   -->
     <div id="app">
+        <h3>First Vue component</h3>
         {{ message }}
       </div>
 
@@ -18,6 +21,7 @@
          data.messege propierty -->
 
     <div id="app-2">
+        <h3>Binding</h3>
     <span v-bind:title="message">
         Hover your mouse over me for a few seconds
         to see my dynamically bound title!
@@ -26,11 +30,15 @@
     <!--With this third component, we'll learn v-if, a condition bained with a boolean and only
         visible in dom if it's true  -->
     <div id="app-3">
+        <h3>v-if directive</h3>
         <span v-if="seen">Now you see me</span>
+        <br><br>
+        <span>Tap <code> app3.seen=false </code> on console to see how it works</span>
     </div>
 <!--app-4 div will iterate over th todos array  -->
     <div id="app-4">
-        <ol>
+        <h3>v-for directive</h3>
+        <ol class="centerList" >
             <li v-for="todo in todos">
             {{ todo.text }}
             </li>
@@ -38,12 +46,14 @@
     </div>
         <!--app-5 show us how methods with buttons works  -->
     <div id="app-5">
+        <h3> Applying methods</h3>
             <p>{{ message }}</p>
             <button v-on:click="reverseMessage">Reverse Message</button>
           </div>
     <!-- Due to reactive propierties, app-6 allow us to modify message string with an input 
     and it will render it at the same time-->
     <div id="app-6">
+        <h3>Reactivity propierties with an input </h3>
         <p>{{ message }}</p>
         <input v-model="message">
         </div>
